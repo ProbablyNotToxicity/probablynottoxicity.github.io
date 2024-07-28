@@ -1,3 +1,15 @@
-modules = ["web"]
+entrypoint="index.html"
+hidden=[".config"]
+modules = ["web:v2-20230623-0b7a606"]
+
 [nix]
-channel = "stable-24_05"
+channel = "stable-23_11"
+
+[deployment]
+publicDir = "/"
+deploymentTarget = "static"
+
+[[ports]]
+localPort = 2137
+externalPort = 9000
+
